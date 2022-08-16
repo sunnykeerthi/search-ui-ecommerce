@@ -94,7 +94,7 @@ const ProductsListContainer = (props: any) => {
     <Loading />
   ) : (
     <>
-      <AppliedFilters />
+      {/* <AppliedFilters /> */}
       {isGrid ? (
         <WrapperGrid>
           <div className="products-container">
