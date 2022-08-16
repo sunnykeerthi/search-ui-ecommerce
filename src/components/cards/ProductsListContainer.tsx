@@ -54,7 +54,7 @@ const ProductsListContainer = (props: any) => {
   const getPriceRange = (): SelectableFilter | undefined => {
     if (priceValues[0] && priceValues[1]) {
       return {
-        displayName: `${priceValues[0]} - ${priceValues[1]}`,
+        displayName: `$${priceValues[0]} - $${priceValues[1]}`,
         selected: true,
         fieldId: "price.value",
         value: {
@@ -94,8 +94,7 @@ const ProductsListContainer = (props: any) => {
     <Loading />
   ) : (
     <>
-      {/* <AppliedFilters /> */}
-      {isGrid ? (
+       {isGrid ? (
         <WrapperGrid>
           <div className="products-container">
             <ProductsVerticalResults
