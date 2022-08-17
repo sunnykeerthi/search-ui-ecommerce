@@ -88,13 +88,12 @@ const ProductsListContainer = (props: any) => {
       }
     }
   }, [filterState]);
-  console.log(isLoading, results);
 
   return isLoading && results >= 1 ? (
     <Loading />
   ) : (
     <>
-       {isGrid ? (
+      {isGrid ? (
         <WrapperGrid>
           <div className="products-container">
             <ProductsVerticalResults
