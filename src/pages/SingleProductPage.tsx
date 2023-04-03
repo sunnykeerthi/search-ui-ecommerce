@@ -65,6 +65,7 @@ export interface Response {
   c_productCategory: string[];
   c_subtitle: string[];
   c_type: string[];
+  c_productDescription: string;
   meta: Meta2;
 }
 
@@ -130,10 +131,7 @@ const SingleProductPage = () => {
               <h2>{data?.name}</h2>
               <h5 className="price">{data?.c_price}</h5>
               <p className="desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-                animi commodi ab in cum natus, distinctio accusantium
-                praesentium deserunt dignissimos porro provident temporibus
-                exercitationem sunt eligendi consequatur eum neque quas.
+                {data?.c_productDescription}
               </p>
               {data?.c_department && (
                 <p className="info">
